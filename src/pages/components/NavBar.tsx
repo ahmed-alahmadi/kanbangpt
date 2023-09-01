@@ -68,12 +68,18 @@ export const NavBar = () => {
                 className="block rounded py-2 pl-3 pr-4 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
               >
                 {isSignedIn && (
-                  <SignOutButton className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700" />
+                  <button className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700">
+                    <SignOutButton />
+                  </button>
                 )}
                 {!isSignedIn && (
                   <div className="flex gap-2">
-                    <SignInButton className=" rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700" />
-                    <SignUpButton className=" rounded bg-slate-200 px-4 py-2 font-bold text-black hover:bg-slate-300" />
+                    <button className=" rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700">
+                      <SignInButton />
+                    </button>
+                    <button className=" rounded bg-slate-200 px-4 py-2 font-bold text-black hover:bg-slate-300">
+                      <SignUpButton />
+                    </button>
                   </div>
                 )}
               </a>
